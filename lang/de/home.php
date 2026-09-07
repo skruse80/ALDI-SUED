@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'eyebrow' => 'Portfolio-Demo · Laravel / Filament',
+    'title' => 'Price Broker',
+    'tagline' => 'Filialen senden Preise. Die API prüft sie an der Kante, ein Worker schreibt sie append-only. Der aktuelle Preis wird gelesen, nicht extra gespeichert.',
+    'admin' => 'Admin öffnen',
+    'architecture' => 'Architektur',
+    'status_heading' => 'Betrieb',
+    'liveness' => 'Liveness',
+    'liveness_hint' => 'Prozess lebt. Reicht nicht für Traffic.',
+    'readiness' => 'Readiness',
+    'readiness_hint' => 'Postgres und Redis antworten — bereit für Traffic.',
+    'ready' => 'bereit',
+    'not_ready' => 'nicht bereit',
+    'database' => 'Datenbank',
+    'redis' => 'Redis',
+    'skipped' => 'kein Dependency in dieser Umgebung',
+    'ingest_heading' => 'Ingest',
+    'ingest_body' => 'POST /api/price-updates mit Bearer-Token. 202 accepted, Replay derselben trace_id ist duplicate, anderer Payload ist 409. 60 Requests/Minute. Typisierter Client: clients/ingest.',
+    'admin_heading' => 'Admin',
+    'admin_body' => 'Filament-Cockpit: aktuelle Filialpreise, History read-only, fehlgeschlagene Jobs. Demo-Login steht in der README.',
+    'decisions_heading' => 'Bewusste Entscheidungen',
+    'decision_history' => 'History ist die einzige Wahrheit. Kein denormalisierter „aktueller Preis“.',
+    'decision_queue' => 'Redis-Queue statt Kafka — Laravel-idiomatisch, ein Runtime.',
+    'decision_probes' => 'Lokal Docker Compose. Dieselben Prozesse wären in Kubernetes zwei Deployments mit genau diesen Probes.',
+];

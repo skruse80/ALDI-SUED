@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'eyebrow' => 'Portfolio demo · Laravel / Filament',
+    'title' => 'Price Broker',
+    'tagline' => 'Stores submit prices. The API validates at the edge, a worker appends history. The current price is derived, not stored twice.',
+    'admin' => 'Open admin',
+    'architecture' => 'Architecture',
+    'status_heading' => 'Operations',
+    'liveness' => 'Liveness',
+    'liveness_hint' => 'The process is up. That is not enough to take traffic.',
+    'readiness' => 'Readiness',
+    'readiness_hint' => 'Postgres and Redis respond — safe to receive traffic.',
+    'ready' => 'ready',
+    'not_ready' => 'not ready',
+    'database' => 'Database',
+    'redis' => 'Redis',
+    'skipped' => 'not a dependency in this environment',
+    'ingest_heading' => 'Ingest',
+    'ingest_body' => 'POST /api/price-updates with a bearer token. 202 accepted, replaying the same trace_id is duplicate, a different payload is 409. 60 requests/minute. Typed client: clients/ingest.',
+    'admin_heading' => 'Admin',
+    'admin_body' => 'Filament cockpit: current store prices, append-only history, failed jobs. Demo login is in the README.',
+    'decisions_heading' => 'Deliberate choices',
+    'decision_history' => 'History is the system of record. No denormalised current price.',
+    'decision_queue' => 'Redis queue instead of Kafka — one Laravel runtime.',
+    'decision_probes' => 'Docker Compose locally. In Kubernetes these would be two deployments using the same probes.',
+];

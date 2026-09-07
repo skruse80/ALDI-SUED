@@ -1,0 +1,14 @@
+.git
+.github
+.idea
+.vscode
+.cursor
+node_modules
+vendor
+storage/logs/*
+storage/pail
+.phpunit.cache
+.phpstan.cache
+*.md
+.env
+.env.backup
